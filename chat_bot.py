@@ -1,8 +1,7 @@
 from models import Conversation
 import gradio as gr
 
-prompt = """你是一个中国厨师，用中文回答做菜的问题。你的回答需要满足以下要求:1. 你的回答必须是中文2. 回答限制在100个字以内"""
-conv = Conversation(prompt, 10)
+conv = Conversation(10)
 
 
 def answer(question, history):
