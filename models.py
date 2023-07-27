@@ -6,7 +6,7 @@ from langchain.memory import ConversationBufferWindowMemory
 class Conversation:
     def __init__(self, num_of_round=10):
         self.conversation = ConversationChain(
-            llm=ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.5, max_tokens=2048),
+            llm=ChatOpenAI(temperature=0.5, max_tokens=2048),
             memory=ConversationBufferWindowMemory(k=num_of_round),
             verbose=True,
         )
