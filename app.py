@@ -23,4 +23,4 @@ with gr.Blocks(css="#chatbot{height:300px} .overflow-y-auto{height:500px}") as d
     text.submit(answer, [text, state], [chatbot, state])
 
 # 在本地启动时会卡住主线程，在notebook中则不会
-demo.launch(server_name='0.0.0.0', server_port=8080, show_error=True)
+demo.launch(show_error=True, share=False)
